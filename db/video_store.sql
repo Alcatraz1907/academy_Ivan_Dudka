@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 24 2014 г., 11:18
+-- Время создания: Окт 24 2014 г., 17:35
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -28,17 +28,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `films` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name_produser` text NOT NULL,
-  `name_director_produser` text NOT NULL,
-  `name_film` text NOT NULL,
-  `ganre` text NOT NULL,
-  `duration` text NOT NULL,
+  `firstname_name_produser_id` int(11) NOT NULL,
+  `name_film` char(50) NOT NULL,
+  `ganre` char(50) NOT NULL,
+  `duration` char(50) NOT NULL,
   `publication_year` date NOT NULL,
   `budget` float NOT NULL,
-  `studio` int(11) NOT NULL,
-  `date_delivery_on_depositoriy` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  `studio_id` int(11) NOT NULL,
+  `date_delivery_on_depositoriy` char(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `studio_id` (`studio_id`),
+  KEY `firstname_name_produser_id` (`firstname_name_produser_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Дамп данных таблицы `films`
+--
+
+INSERT INTO `films` (`id`, `firstname_name_produser_id`, `name_film`, `ganre`, `duration`, `publication_year`, `budget`, `studio_id`, `date_delivery_on_depositoriy`) VALUES
+(3, 1, 'форсаж 4', 'бойовик', '2', '2014-10-01', 20000000, 1, '1652');
 
 -- --------------------------------------------------------
 
@@ -47,14 +55,21 @@ CREATE TABLE IF NOT EXISTS `films` (
 --
 
 CREATE TABLE IF NOT EXISTS `produser` (
-  `produser_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` char(40) NOT NULL,
   `name` char(40) NOT NULL,
   `year_of_birth` int(4) NOT NULL,
   `year_of_death` int(4) NOT NULL,
   `nationality` char(50) NOT NULL,
-  PRIMARY KEY (`produser_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `produser`
+--
+
+INSERT INTO `produser` (`id`, `first_name`, `name`, `year_of_birth`, `year_of_death`, `nationality`) VALUES
+(1, 'Дудка', 'Іван', 1994, 0, 'українець');
 
 -- --------------------------------------------------------
 
@@ -63,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `produser` (
 --
 
 CREATE TABLE IF NOT EXISTS `studio` (
-  `studio_id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(40) NOT NULL,
   `country` char(40) NOT NULL,
   `city` char(40) NOT NULL,
@@ -71,8 +86,26 @@ CREATE TABLE IF NOT EXISTS `studio` (
   `house` char(20) NOT NULL,
   `post_index` char(30) NOT NULL,
   `dealer` char(50) NOT NULL,
-  PRIMARY KEY (`studio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `studio`
+--
+
+INSERT INTO `studio` (`id`, `name`, `country`, `city`, `street`, `house`, `post_index`, `dealer`) VALUES
+(1, '20 століття фох', 'США', 'Нью-йорк', 'Головна', '3', '15165', 'Погурський Олег');
+
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `films`
+--
+ALTER TABLE `films`
+  ADD CONSTRAINT `films_ibfk_2` FOREIGN KEY (`studio_id`) REFERENCES `studio` (`id`),
+  ADD CONSTRAINT `films_ibfk_1` FOREIGN KEY (`firstname_name_produser_id`) REFERENCES `produser` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
