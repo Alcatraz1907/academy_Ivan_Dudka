@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 24 2014 г., 21:11
+-- Время создания: Окт 26 2014 г., 00:28
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -41,118 +41,191 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `film`
+-- Структура таблицы `countres`
 --
 
-CREATE TABLE IF NOT EXISTS `film` ( -- films
+CREATE TABLE IF NOT EXISTS `countres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `film_name` char(50) NOT NULL, -- name
-  `ganre` char(50) NOT NULL, -- bad : another simple table - ganre_id
-  `duration` char(50) NOT NULL, -- ot char, time
-  `publication_year` date NOT NULL, -- year of publication ???
+  `country` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `films`
+--
+
+CREATE TABLE IF NOT EXISTS `films` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(50) NOT NULL,
+  `ganre_id` int(11) NOT NULL,
+  `duration` time NOT NULL,
+  `year_of_publication` date NOT NULL,
   `budget` float NOT NULL,
-  `date_delivery_on_depositoriy` char(50) NOT NULL, -- delivery_date
-  PRIMARY KEY (`id`)
+  `delivery_date` date NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `ganre_id` (`ganre_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
--- Дамп данных таблицы `film`
+-- Дамп данных таблицы `films`
 --
 
-INSERT INTO `film` (`id`, `film_name`, `ganre`, `duration`, `publication_year`, `budget`, `date_delivery_on_depositoriy`) VALUES
-(3, 'форсаж 4', 'бойовик', '2', '2014-10-01', 20000000, '1652');
+INSERT INTO `films` (`id`, `name`, `ganre_id`, `duration`, `year_of_publication`, `budget`, `delivery_date`) VALUES
+(3, 'форсаж 4', 0, '00:00:02', '2014-10-01', 20000000, '0000-00-00');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `producer`
+-- Структура таблицы `ganres`
 --
 
-CREATE TABLE IF NOT EXISTS `producer` ( -- -s
+CREATE TABLE IF NOT EXISTS `ganres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` char(40) NOT NULL,
-  `name` char(40) NOT NULL, -- last_name
-  `year_of_birth` int(4) NOT NULL, -- year
-  `year_of_death` int(4) DEFAULT NULL,
-  `nationality` char(50) NOT NULL,
+  `ganre` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `ganre` (`ganre`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `ganres_films`
+--
+
+CREATE TABLE IF NOT EXISTS `ganres_films` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ganre_id` int(11) NOT NULL,
+  `film_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `ganre_id` (`ganre_id`,`film_id`),
+  KEY `film_id` (`film_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `nationality`
+--
+
+CREATE TABLE IF NOT EXISTS `nationality` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nationality` int(11) NOT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `producers`
+--
+
+CREATE TABLE IF NOT EXISTS `producers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `last_name` char(40) NOT NULL,
+  `name` char(40) NOT NULL,
+  `year_of_birth` year(4) NOT NULL,
+  `year_of_death` year(4) DEFAULT NULL,
+  `nationality_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `nationality` (`nationality_id`),
+  KEY `nationality_id` (`nationality_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп данных таблицы `producer`
+-- Дамп данных таблицы `producers`
 --
 
-INSERT INTO `producer` (`id`, `first_name`, `name`, `year_of_birth`, `year_of_death`, `nationality`) VALUES
-(1, 'Дудка', 'Іван', 1994, 0, 'українець');
+INSERT INTO `producers` (`id`, `last_name`, `name`, `year_of_birth`, `year_of_death`, `nationality_id`) VALUES
+(1, 'Дудка', 'Іван', 1994, 0000, 0);
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `relation_film_producer`
+-- Структура таблицы `producers_films`
 --
 
-CREATE TABLE IF NOT EXISTS `relation_film_producer` ( -- producers_films
+CREATE TABLE IF NOT EXISTS `producers_films` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `film_id` int(11) NOT NULL,
-  `producer_id` int(11) NOT NULL,
-  UNIQUE KEY `film_id` (`film_id`),
-  UNIQUE KEY `producer_id` (`producer_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `produсer_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `film_id_2` (`produсer_id`),
+  KEY `produсer_id` (`produсer_id`),
+  KEY `produсer_id_2` (`produсer_id`),
+  KEY `film_id` (`film_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `relation_film_studio`
+-- Структура таблицы `studios`
 --
 
-CREATE TABLE IF NOT EXISTS `relation_film_studio` ( -- studios_films
-  `film_id` int(11) NOT NULL,
-  `studio_id` int(11) NOT NULL,
-  UNIQUE KEY `film_id` (`film_id`,`studio_id`),
-  KEY `studio_id` (`studio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `studio`
---
-
-CREATE TABLE IF NOT EXISTS `studio` ( --studios
+CREATE TABLE IF NOT EXISTS `studios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(40) NOT NULL,
-  `country` char(40) NOT NULL, --another table
+  `country_id` int(11) NOT NULL,
   `city` char(40) NOT NULL,
-  --`street` char(100) NOT NULL, --address
-  --`house` char(20) NOT NULL,
-  `post_index` char(30) NOT NULL, --postcode -- zip
-  `dealer` char(50) NOT NULL, --contact_person
-  PRIMARY KEY (`id`)
+  `address` char(100) NOT NULL,
+  `postcode` char(100) NOT NULL,
+  `contact_person` char(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `country_id` (`country_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
--- Дамп данных таблицы `studio`
+-- Дамп данных таблицы `studios`
 --
 
-INSERT INTO `studio` (`id`, `name`, `country`, `city`, `street`, `house`, `post_index`, `dealer`) VALUES
-(1, '20 століття фох', 'США', 'Нью-йорк', 'Головна', '3', '15165', 'Погурський Олег');
+INSERT INTO `studios` (`id`, `name`, `country_id`, `city`, `address`, `postcode`, `contact_person`) VALUES
+(1, '20 століття фох', 0, 'Нью-йорк', 'Головна', '15165', 'Погурський Олег');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `studios_films`
+--
+
+CREATE TABLE IF NOT EXISTS `studios_films` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `film_id` int(11) NOT NULL,
+  `studio_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `film_id` (`film_id`),
+  KEY `studio_id` (`studio_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
--- Ограничения внешнего ключа таблицы `relation_film_producer`
+-- Ограничения внешнего ключа таблицы `ganres_films`
 --
-ALTER TABLE `relation_film_producer`
-  ADD CONSTRAINT `relation_film_producer_ibfk_4` FOREIGN KEY (`producer_id`) REFERENCES `producer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `relation_film_producer_ibfk_3` FOREIGN KEY (`film_id`) REFERENCES `film` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `ganres_films`
+  ADD CONSTRAINT `ganres_films_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`ganre_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ganres_films_ibfk_2` FOREIGN KEY (`ganre_id`) REFERENCES `ganres` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения внешнего ключа таблицы `relation_film_studio`
+-- Ограничения внешнего ключа таблицы `producers_films`
 --
-ALTER TABLE `relation_film_studio`
-  ADD CONSTRAINT `relation_film_studio_ibfk_4` FOREIGN KEY (`studio_id`) REFERENCES `studio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `relation_film_studio_ibfk_3` FOREIGN KEY (`film_id`) REFERENCES `film` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `producers_films`
+  ADD CONSTRAINT `producers_films_ibfk_2` FOREIGN KEY (`produсer_id`) REFERENCES `producers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `producers_films_ibfk_3` FOREIGN KEY (`film_id`) REFERENCES `films` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `studios_films`
+--
+ALTER TABLE `studios_films`
+  ADD CONSTRAINT `studios_films_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `studios_films_ibfk_2` FOREIGN KEY (`studio_id`) REFERENCES `studios` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
