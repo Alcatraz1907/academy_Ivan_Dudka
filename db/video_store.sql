@@ -44,14 +44,14 @@ DELIMITER ;
 -- Структура таблицы `film`
 --
 
-CREATE TABLE IF NOT EXISTS `film` (
+CREATE TABLE IF NOT EXISTS `film` ( -- films
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `film_name` char(50) NOT NULL,
-  `ganre` char(50) NOT NULL,
-  `duration` char(50) NOT NULL,
-  `publication_year` date NOT NULL,
+  `film_name` char(50) NOT NULL, -- name
+  `ganre` char(50) NOT NULL, -- bad : another simple table - ganre_id
+  `duration` char(50) NOT NULL, -- ot char, time
+  `publication_year` date NOT NULL, -- year of publication ???
   `budget` float NOT NULL,
-  `date_delivery_on_depositoriy` char(50) NOT NULL,
+  `date_delivery_on_depositoriy` char(50) NOT NULL, -- delivery_date
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -68,11 +68,11 @@ INSERT INTO `film` (`id`, `film_name`, `ganre`, `duration`, `publication_year`, 
 -- Структура таблицы `producer`
 --
 
-CREATE TABLE IF NOT EXISTS `producer` (
+CREATE TABLE IF NOT EXISTS `producer` ( -- -s
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` char(40) NOT NULL,
-  `name` char(40) NOT NULL,
-  `year_of_birth` int(4) NOT NULL,
+  `name` char(40) NOT NULL, -- last_name
+  `year_of_birth` int(4) NOT NULL, -- year
   `year_of_death` int(4) DEFAULT NULL,
   `nationality` char(50) NOT NULL,
   PRIMARY KEY (`id`)
@@ -91,7 +91,7 @@ INSERT INTO `producer` (`id`, `first_name`, `name`, `year_of_birth`, `year_of_de
 -- Структура таблицы `relation_film_producer`
 --
 
-CREATE TABLE IF NOT EXISTS `relation_film_producer` (
+CREATE TABLE IF NOT EXISTS `relation_film_producer` ( -- producers_films
   `film_id` int(11) NOT NULL,
   `producer_id` int(11) NOT NULL,
   UNIQUE KEY `film_id` (`film_id`),
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `relation_film_producer` (
 -- Структура таблицы `relation_film_studio`
 --
 
-CREATE TABLE IF NOT EXISTS `relation_film_studio` (
+CREATE TABLE IF NOT EXISTS `relation_film_studio` ( -- studios_films
   `film_id` int(11) NOT NULL,
   `studio_id` int(11) NOT NULL,
   UNIQUE KEY `film_id` (`film_id`,`studio_id`),
@@ -117,15 +117,15 @@ CREATE TABLE IF NOT EXISTS `relation_film_studio` (
 -- Структура таблицы `studio`
 --
 
-CREATE TABLE IF NOT EXISTS `studio` (
+CREATE TABLE IF NOT EXISTS `studio` ( --studios
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(40) NOT NULL,
-  `country` char(40) NOT NULL,
+  `country` char(40) NOT NULL, --another table
   `city` char(40) NOT NULL,
-  `street` char(100) NOT NULL,
-  `house` char(20) NOT NULL,
-  `post_index` char(30) NOT NULL,
-  `dealer` char(50) NOT NULL,
+  --`street` char(100) NOT NULL, --address
+  --`house` char(20) NOT NULL,
+  `post_index` char(30) NOT NULL, --postcode -- zip
+  `dealer` char(50) NOT NULL, --contact_person
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
