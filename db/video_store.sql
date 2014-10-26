@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 26 2014 г., 00:28
+-- Время создания: Окт 26 2014 г., 10:43
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -41,10 +41,14 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `countres`
+-- Структура таблицы `countries`
 --
 
+<<<<<<< .mine
+CREATE TABLE IF NOT EXISTS `countries` (
+=======
 CREATE TABLE IF NOT EXISTS `countres` ( -- countries
+>>>>>>> .r15
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
@@ -207,11 +211,23 @@ CREATE TABLE IF NOT EXISTS `studios_films` (
 --
 
 --
+-- Ограничения внешнего ключа таблицы `countries`
+--
+ALTER TABLE `countries`
+  ADD CONSTRAINT `countries_ibfk_1` FOREIGN KEY (`id`) REFERENCES `studios` (`country_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Ограничения внешнего ключа таблицы `ganres_films`
 --
 ALTER TABLE `ganres_films`
   ADD CONSTRAINT `ganres_films_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`ganre_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ganres_films_ibfk_2` FOREIGN KEY (`ganre_id`) REFERENCES `ganres` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `nationality`
+--
+ALTER TABLE `nationality`
+  ADD CONSTRAINT `nationality_ibfk_1` FOREIGN KEY (`id`) REFERENCES `producers` (`nationality_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `producers_films`
