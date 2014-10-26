@@ -44,7 +44,7 @@ DELIMITER ;
 -- Структура таблицы `countres`
 --
 
-CREATE TABLE IF NOT EXISTS `countres` (
+CREATE TABLE IF NOT EXISTS `countres` ( -- countries
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
