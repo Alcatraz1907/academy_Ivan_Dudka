@@ -1,0 +1,96 @@
+* {
+	font-family: 'Open Sans', verdana, arial, sans-serif;
+}
+
+.logoImg {
+	height: 50px;
+}
+
+.indentation {
+	padding: 5px 10px 15px 20px;
+}
+
+.header {
+	margin-bottom: 30px;
+	text-align: center;
+	padding: 2px;
+}
+
+.clborder {
+	border-width: 1;
+	border-style: solid;
+}
+
+.shadow {
+    background: silver;
+	box-shadow: 0 0 10px rgba(4, 0, 0, 0.5);
+
+}
+
+.menu {
+	float: left;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.cltitle {
+	color: white;
+	text-shadow: 0 0 2px black, 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+	border-color: rgba(0, 0, 255, 0.5);
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.contents {
+	border-color: blue;
+	float: left;
+	padding: 5px;
+	margin-left: 10px;
+}
+
+.footer {
+	border-color: purple;
+	clear: both;
+	text-align: center;
+}
+
+.clear:after {
+	content: "&nbsp;";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
+}
+
+.lab {
+	border-color: rgba(0, 0, 255, 0.2);
+	border-top-left-radius: 15px;
+	box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.5);
+	color: black;
+	cursor: pointer;
+	display: inline-block;
+	height: 30px;
+	padding: 5px;
+	right: 0;
+	text-align: center;
+	width: 100%;
+}
+
+.not_selected:hover {
+	background-color: rgba(0, 0, 255, 0.2);
+}
+
+.selected {
+	background-color: rgba(250, 148, 38, 0.2);
+}
+
+.rotateText {
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	writing-mode: tb-rl;
+}
