@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 26 2014 г., 10:43
+-- Время создания: Окт 26 2014 г., 12:41
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.3.13
 
@@ -44,11 +44,7 @@ DELIMITER ;
 -- Структура таблицы `countries`
 --
 
-<<<<<<< .mine
 CREATE TABLE IF NOT EXISTS `countries` (
-=======
-CREATE TABLE IF NOT EXISTS `countres` ( -- countries
->>>>>>> .r15
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `country` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
@@ -64,21 +60,19 @@ CREATE TABLE IF NOT EXISTS `countres` ( -- countries
 CREATE TABLE IF NOT EXISTS `films` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(50) NOT NULL,
-  `ganre_id` int(11) NOT NULL,
   `duration` time NOT NULL,
   `year_of_publication` date NOT NULL,
   `budget` float NOT NULL,
   `delivery_date` date NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `ganre_id` (`ganre_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `films`
 --
 
-INSERT INTO `films` (`id`, `name`, `ganre_id`, `duration`, `year_of_publication`, `budget`, `delivery_date`) VALUES
-(3, 'форсаж 4', 0, '00:00:02', '2014-10-01', 20000000, '0000-00-00');
+INSERT INTO `films` (`id`, `name`, `duration`, `year_of_publication`, `budget`, `delivery_date`) VALUES
+(3, 'форсаж 4', '00:00:02', '2014-10-01', 20000000, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -101,22 +95,19 @@ CREATE TABLE IF NOT EXISTS `ganres` (
 --
 
 CREATE TABLE IF NOT EXISTS `ganres_films` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   `ganre_id` int(11) NOT NULL,
   `film_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
   KEY `ganre_id` (`ganre_id`,`film_id`),
   KEY `film_id` (`film_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `nationality`
+-- Структура таблицы `nationalities`
 --
 
-CREATE TABLE IF NOT EXISTS `nationality` (
+CREATE TABLE IF NOT EXISTS `nationalities` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nationality` int(11) NOT NULL,
   PRIMARY KEY (`id`)
@@ -154,16 +145,13 @@ INSERT INTO `producers` (`id`, `last_name`, `name`, `year_of_birth`, `year_of_de
 --
 
 CREATE TABLE IF NOT EXISTS `producers_films` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   `film_id` int(11) NOT NULL,
   `produсer_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
   KEY `film_id_2` (`produсer_id`),
   KEY `produсer_id` (`produсer_id`),
   KEY `produсer_id_2` (`produсer_id`),
   KEY `film_id` (`film_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -197,14 +185,11 @@ INSERT INTO `studios` (`id`, `name`, `country_id`, `city`, `address`, `postcode`
 --
 
 CREATE TABLE IF NOT EXISTS `studios_films` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
   `film_id` int(11) NOT NULL,
   `studio_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
   KEY `film_id` (`film_id`),
   KEY `studio_id` (`studio_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -220,14 +205,14 @@ ALTER TABLE `countries`
 -- Ограничения внешнего ключа таблицы `ganres_films`
 --
 ALTER TABLE `ganres_films`
-  ADD CONSTRAINT `ganres_films_ibfk_1` FOREIGN KEY (`film_id`) REFERENCES `films` (`ganre_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `ganres_films_ibfk_3` FOREIGN KEY (`film_id`) REFERENCES `films` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ganres_films_ibfk_2` FOREIGN KEY (`ganre_id`) REFERENCES `ganres` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ограничения внешнего ключа таблицы `nationality`
+-- Ограничения внешнего ключа таблицы `nationalities`
 --
-ALTER TABLE `nationality`
-  ADD CONSTRAINT `nationality_ibfk_1` FOREIGN KEY (`id`) REFERENCES `producers` (`nationality_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `nationalities`
+  ADD CONSTRAINT `nationalities_ibfk_1` FOREIGN KEY (`id`) REFERENCES `producers` (`nationality_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `producers_films`
