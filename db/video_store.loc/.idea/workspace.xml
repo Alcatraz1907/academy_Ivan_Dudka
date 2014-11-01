@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="073d0dc7-aff4-4425-8bd6-1b3c4ca2d822" name="Default" comment="" />
+    <ignored path="controler.loc.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="controler.loc" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/page/addfilm/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="7" selection-start="3232" selection-end="3232" vertical-scroll-proportion="0.56920075" vertical-offset="1017" max-vertical-offset="1836">
+              <folding>
+                <marker date="1414830000225" expanded="true" signature="339:378" placeholder="SELECT id,na..producers..." />
+                <marker date="1414830000225" expanded="true" signature="1012:1039" placeholder="SELECT id,ga..ganres..." />
+                <marker date="1414830000225" expanded="true" signature="1909:1936" placeholder="SELECT id,na..studios..." />
+                <marker date="1414830000225" expanded="true" signature="3284:3472" placeholder="INSERT INTO ..." />
+                <marker date="1414830000225" expanded="true" signature="3601:3723" placeholder="INSERT INTO ..." />
+                <marker date="1414830000225" expanded="true" signature="3822:3936" placeholder="INSERT INTO ..." />
+                <marker date="1414830000225" expanded="true" signature="4036:4153" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Base.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/application/models/Base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="3" selection-start="122" selection-end="134" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Autoloader.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/yourNameSpace/Autoloader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="35" selection-start="218" selection-end="226" vertical-scroll-proportion="-3.2692308" vertical-offset="102" max-vertical-offset="1292">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/application/repository/BaseRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="323">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilmsRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/application/repository/FilmsRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="40" selection-start="1452" selection-end="1452" vertical-scroll-proportion="-15.230769" vertical-offset="199" max-vertical-offset="1122">
+              <folding>
+                <marker date="1414752232015" expanded="true" signature="410:1410" placeholder="SELECT f.nam..films..." />
+                <marker date="1414752232015" expanded="true" signature="2151:2366" placeholder="INSERT INTO ..." />
+                <marker date="1414752232015" expanded="true" signature="2556:2590" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="conrol_input.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/js/conrol_input.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="26" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/page/printFilmsByStudio/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="29" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1530">
+              <folding>
+                <marker date="1414695306696" expanded="true" signature="350:377" placeholder="SELECT id,na..studios..." />
+                <marker date="1414695306696" expanded="true" signature="888:1679" placeholder="SELECT s.id,..studios..." />
+                <marker date="1414695306696" expanded="true" signature="1865:2118" placeholder="..." />
+                <marker date="1414695306696" expanded="true" signature="1878:2118" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/page/printProducer/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="27" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1904">
+              <folding>
+                <marker date="1414696072652" expanded="true" signature="1766:2302" placeholder="SELECT p.id,..producers..." />
+                <marker date="1414696072652" expanded="true" signature="2545:2742" placeholder="..." />
+                <marker date="1414696072652" expanded="true" signature="2558:2742" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/page/addproducer/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="45" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1105">
+              <folding>
+                <marker date="1414696945029" expanded="true" signature="637:664" placeholder="SELECT * FRO..nationalities..." />
+                <marker date="1414696945029" expanded="true" signature="1563:1806" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/page/printStudios/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2091">
+              <folding>
+                <marker date="1414695995279" expanded="true" signature="1833:2402" placeholder="SELECT s.id,..studios..." />
+                <marker date="1414695995279" expanded="true" signature="2693:2912" placeholder="..." />
+                <marker date="1414695995279" expanded="true" signature="2706:2912" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/www/page/formAddToFilms/index.php" />
+        <option value="$PROJECT_DIR$/www/units/menu.php" />
+        <option value="$PROJECT_DIR$/www/units/footer.php" />
+        <option value="$PROJECT_DIR$/www/index.php" />
+        <option value="$PROJECT_DIR$/www/style/style.css" />
+        <option value="$PROJECT_DIR$/www/units/directory.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Countries.php" />
+        <option value="$PROJECT_DIR$/www/application/models/GanresFilms.php" />
+        <option value="$PROJECT_DIR$/www/application/models/ProdusersFilms.php" />
+        <option value="$PROJECT_DIR$/www/application/models/StudiosFilms.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Base.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Ganres.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Nationalities.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Producers.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Studios.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/GanresRepositoriy.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/NationalitiesRepositoriy.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/ProducersRepository.php" />
+        <option value="$PROJECT_DIR$/www/page/printFilms/PrintFilms.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/CountriesRepository.php" />
+        <option value="$PROJECT_DIR$/www/application/bootstrap.php" />
+        <option value="$PROJECT_DIR$/www/yourNameSpace/Autoloader.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/BaseRepository.php" />
+        <option value="$PROJECT_DIR$/www/application/repository/StudiosRepository.php" />
+        <option value="$PROJECT_DIR$/www/page/addganre/index.php" />
+        <option value="$PROJECT_DIR$/www/application/models/Films.php" />
+        <option value="$PROJECT_DIR$/www/page/printFilmsByStudio.php" />
+        <option value="$PROJECT_DIR$/www/units/header.php" />
+        <option value="$PROJECT_DIR$/www/page/addcountry/index.php" />
+        <option value="$PROJECT_DIR$/www/page/addNationality/index.php" />
+        <option value="$PROJECT_DIR$/www/page/deleteFilmsByName/index.php" />
+        <option value="$PROJECT_DIR$/www/page/addStudio/index.php" />
+        <option value="$PROJECT_DIR$/www/page/deleteStodioById/index.php" />
+        <option value="$PROJECT_DIR$/www/page/deleteProducerByName/index.php" />
+        <option value="$PROJECT_DIR$/www/page/printFilmsByStudio/index.php" />
+        <option value="$PROJECT_DIR$/www/page/printFilmsByProduser/index.php" />
+        <option value="$PROJECT_DIR$/www/page/searchFilmByName/index.php" />
+        <option value="$PROJECT_DIR$/www/page/searchStudioByName/index.php" />
+        <option value="$PROJECT_DIR$/www/page/searchProducerByLN/index.php" />
+        <option value="$PROJECT_DIR$/www/units/contents.php" />
+        <option value="$PROJECT_DIR$/www/units/default.php" />
+        <option value="$PROJECT_DIR$/www/page/printFilms/index.php" />
+        <option value="$PROJECT_DIR$/www/page/printStudios/index.php" />
+        <option value="$PROJECT_DIR$/www/page/printProducer/index.php" />
+        <option value="$PROJECT_DIR$/www/page/addproducer/index.php" />
+        <option value="$PROJECT_DIR$/www/js/conrol_input.js" />
+        <option value="$PROJECT_DIR$/www/application/repository/FilmsRepository.php" />
+        <option value="$PROJECT_DIR$/www/page/addfilm/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="units" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addproducer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="addfilm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controler.loc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\TestServers\home\controler.loc\www\application\controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TestServers\home\controler.loc\www" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true" temporary="true" uri="http://localhost:63342/controler.loc/www/page/addfilm/index.php">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="073d0dc7-aff4-4425-8bd6-1b3c4ca2d822" name="Default" comment="" />
+      <created>1414499190884</created>
+      <updated>1414499190884</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19015151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/application/models/Countries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="86" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Films.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="86" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="493" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Ganres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="86" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printFilms/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="2" selection-start="198" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="238" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.09107143" vertical-offset="0" max-vertical-offset="560" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="572" selection-end="572" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="289" selection-end="289" vertical-scroll-proportion="0.12686567" vertical-offset="0" max-vertical-offset="561" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/directory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="37" selection-start="337" selection-end="337" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Nationalities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="125" selection-end="125" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="272" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/GanresFilms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="88" selection-end="88" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="391" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Producers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="126" selection-end="126" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="323" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/ProdusersFilms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="106" selection-end="106" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="306" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Studios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="126" selection-end="126" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/StudiosFilms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="107" selection-end="107" vertical-scroll-proportion="0.15858209" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/GanresRepositoriy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="127" selection-end="128" vertical-scroll-proportion="0.063432835" vertical-offset="51" max-vertical-offset="731" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Ganres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="86" selection-end="103" vertical-scroll-proportion="0.09514926" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="937" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="1019" max-vertical-offset="1734" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/conf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="313" selection-end="313" vertical-scroll-proportion="0.44402984" vertical-offset="0" max-vertical-offset="536" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/NationalitiesRepositoriy.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="103" selection-start="505" selection-end="602" vertical-scroll-proportion="0.42910448" vertical-offset="161" max-vertical-offset="697" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/CountriesRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="56" selection-start="551" selection-end="659" vertical-scroll-proportion="0.39738807" vertical-offset="161" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/ProducersRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="291" selection-end="724" vertical-scroll-proportion="0.15487571" vertical-offset="123" max-vertical-offset="799" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/StudiosRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="967" selection-end="967" vertical-scroll-proportion="0.8880597" vertical-offset="0" max-vertical-offset="952" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="31" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/addNationality/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="25" selection-start="748" selection-end="748" vertical-scroll-proportion="-18.307692" vertical-offset="102" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/addcountry/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="1" selection-start="591" selection-end="649" vertical-scroll-proportion="-14.0" vertical-offset="95" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/addStudio/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="1" selection-start="1946" selection-end="2020" vertical-scroll-proportion="-13.346154" vertical-offset="469" max-vertical-offset="1003" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/deleteStodioById/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="28" selection-start="1198" selection-end="1198" vertical-scroll-proportion="-14.5" vertical-offset="354" max-vertical-offset="884" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/deleteProducerByName/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="47" selection-start="248" selection-end="248" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="850" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/searchFilmByName/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="29" selection-start="2060" selection-end="2060" vertical-scroll-proportion="-0.115384616" vertical-offset="1068" max-vertical-offset="1581" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/searchStudioByName/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="40" selection-start="225" selection-end="225" vertical-scroll-proportion="16.346153" vertical-offset="629" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/searchProducerByLN/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="27" selection-start="1455" selection-end="1455" vertical-scroll-proportion="-4.0384617" vertical-offset="745" max-vertical-offset="1258" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="-3.9230769" vertical-offset="0" max-vertical-offset="204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/contents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="238">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/units/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="32" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="513">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/deleteFilmsByName/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="29" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printFilms/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="2499" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printFilmsByProduser/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1513">
+          <folding>
+            <marker date="1414695326528" expanded="true" signature="-1:-1" placeholder="SELECT id,la..producers..." />
+            <marker date="1414695326528" expanded="true" signature="-1:-1" placeholder="SELECT p.id,..producers..." />
+            <marker date="1414695326528" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1414695326528" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printFilmsByStudio/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1530">
+          <folding>
+            <marker date="1414695306696" expanded="true" signature="350:377" placeholder="SELECT id,na..studios..." />
+            <marker date="1414695306696" expanded="true" signature="888:1679" placeholder="SELECT s.id,..studios..." />
+            <marker date="1414695306696" expanded="true" signature="1865:2118" placeholder="..." />
+            <marker date="1414695306696" expanded="true" signature="1878:2118" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printStudios/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="2091">
+          <folding>
+            <marker date="1414695995279" expanded="true" signature="1833:2402" placeholder="SELECT s.id,..studios..." />
+            <marker date="1414695995279" expanded="true" signature="2693:2912" placeholder="..." />
+            <marker date="1414695995279" expanded="true" signature="2706:2912" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/printProducer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="27" selection-start="2724" selection-end="2724" vertical-scroll-proportion="0.0" vertical-offset="1391" max-vertical-offset="1904">
+          <folding>
+            <marker date="1414696072652" expanded="true" signature="1766:2302" placeholder="SELECT p.id,..producers..." />
+            <marker date="1414696072652" expanded="true" signature="2545:2742" placeholder="..." />
+            <marker date="1414696072652" expanded="true" signature="2558:2742" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/addproducer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="45" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1105">
+          <folding>
+            <marker date="1414696945029" expanded="true" signature="637:664" placeholder="SELECT * FRO..nationalities..." />
+            <marker date="1414696945029" expanded="true" signature="1563:1806" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/conrol_input.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="3" selection-start="122" selection-end="134" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Countries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="86" selection-end="103" vertical-scroll-proportion="0.099029124" vertical-offset="0" max-vertical-offset="515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/models/Films.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.3961165" vertical-offset="0" max-vertical-offset="515">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/yourNameSpace/Autoloader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="218" selection-end="226" vertical-scroll-proportion="-3.2692308" vertical-offset="102" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/BaseRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="1" selection-start="235" selection-end="235" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/application/repository/FilmsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="40" selection-start="1452" selection-end="1452" vertical-scroll-proportion="-15.230769" vertical-offset="199" max-vertical-offset="1122">
+          <folding>
+            <marker date="1414752232015" expanded="true" signature="410:1410" placeholder="SELECT f.nam..films..." />
+            <marker date="1414752232015" expanded="true" signature="2151:2366" placeholder="INSERT INTO ..." />
+            <marker date="1414752232015" expanded="true" signature="2556:2590" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/page/addfilm/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="7" selection-start="3232" selection-end="3232" vertical-scroll-proportion="0.56920075" vertical-offset="1017" max-vertical-offset="1836">
+          <folding>
+            <marker date="1414830000225" expanded="true" signature="339:378" placeholder="SELECT id,na..producers..." />
+            <marker date="1414830000225" expanded="true" signature="1012:1039" placeholder="SELECT id,ga..ganres..." />
+            <marker date="1414830000225" expanded="true" signature="1909:1936" placeholder="SELECT id,na..studios..." />
+            <marker date="1414830000225" expanded="true" signature="3284:3472" placeholder="INSERT INTO ..." />
+            <marker date="1414830000225" expanded="true" signature="3601:3723" placeholder="INSERT INTO ..." />
+            <marker date="1414830000225" expanded="true" signature="3822:3936" placeholder="INSERT INTO ..." />
+            <marker date="1414830000225" expanded="true" signature="4036:4153" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
