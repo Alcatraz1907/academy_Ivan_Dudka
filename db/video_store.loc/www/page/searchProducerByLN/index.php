@@ -5,7 +5,7 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Producers.php";
 ?>
 
 <form action="" method="post" name="form1" >
@@ -23,17 +23,8 @@ if ($_POST['name']!=NULL)
 {
     $name = $_POST['name'];
 
-    $result =  mysql_query("SELECT
-                                      p.id,
-                                      p.last_name,
-                                      p.name,
-                                      p.year_of_birth,
-                                      p.year_of_death,
-                                      n.nationality
-                                  FROM producers AS p
-                                  INNER JOIN nationalities AS n ON
-                                  p.nationality_id = n.id
-                                WHERE p.last_name LIKE '%$name%';")or die(mysql_error());
+    $produser = new Producers();
+    $result = $produser->searchProducer($name);
 
     $row = mysql_fetch_array($result);
     if ($result == 'true')

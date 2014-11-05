@@ -5,7 +5,7 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Studios.php";
 ?>
 
 <form action="" method="post" name="form1" >
@@ -44,9 +44,13 @@ if ($_POST['producer_id']!=NULL)
                                   FROM studios AS s
                                   INNER JOIN countries AS cou ON
                                   s.country_id = cou.id
+
                                  INNER JOIN studios_films AS sf ON s.id = sf.studio_id
                                  INNER JOIN films AS f ON f.id = sf.film_id
                                 WHERE s.id = $id;")or die(mysql_error());
+
+    $studios  = new Studios();
+    $result =  $studios->getFilmsByStudio($id);
 
     $row = mysql_fetch_array($result);
     if ($result == 'true')

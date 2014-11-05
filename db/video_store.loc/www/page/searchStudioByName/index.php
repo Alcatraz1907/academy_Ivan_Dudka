@@ -5,7 +5,7 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Studios.php";
 ?>
 
 <form action="" method="post" name="form1" >
@@ -36,6 +36,9 @@ if ($_POST['name']!=NULL)
                                   s.country_id = cou.id
                                 WHERE s.name LIKE '%$name%';")or die(mysql_error());
 
+    $studio = new Studios();
+
+    $result = $studio->searchStudio($name);
     $row = mysql_fetch_array($result);
     if ($result == 'true')
     {
@@ -45,12 +48,12 @@ if ($_POST['name']!=NULL)
 
         echo'<table border="1">
         <tr>
-            <th>Назва студії </th>
-            <th>Країна</th>
-            <th>Місто</th>
-            <th>Адреса</th>
-            <th>Поштовий індекс</th>
-            <th>Контактна особа</th>
+            <th>Name studo </th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Addressa</th>
+            <th>Postindex</th>
+            <th>Contact person</th>
         </tr>';
 
         do{

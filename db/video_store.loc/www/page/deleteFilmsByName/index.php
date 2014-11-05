@@ -5,17 +5,17 @@
  * Date: 29.10.14
  * Time: 14:05
  */
+require "../models/Films.php";
+$film = new Films();
 ?>
-<?php
-require "../conf/conf.php";
-?>
+
     <form action="" method="post" name="form1" >
         <table border="2">
             <tr><td>Select film for delete</td>
                 <td>
                     <select name="film_id">
                         <?php
-                        $result = mysql_query("SELECT id,name FROM films");
+                        $result = $film->getFilmsTable();
                         while($myrow = mysql_fetch_array($result)){
                             echo '<option value="'.$myrow["id"].'">'.$myrow["name"].'</option>';
                         }
@@ -33,16 +33,11 @@ require "../conf/conf.php";
 
 <?php
 
+
 if ($_POST['film_id']!=NULL)
 {
 
-    $id = $_POST['film_id'];
-
-    $result = mysql_query("DELETE FROM `films` WHERE id = '$id';")or die(mysql_error());
-
-    if ($result == 'true')
-    {echo "delete";}
-    else{echo "not delete";}
+    $film->deLete($_POST['film_id']);
 
 }
 ?>

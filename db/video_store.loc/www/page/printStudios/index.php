@@ -30,34 +30,34 @@
 </form>
 
 <?php
-require "../conf/conf.php";
+require "../models/Studios.php";
 
 function myControlSort($id){
     $how_sort = 0;
     switch ($id) {
         case "name":
             //   echo"name";
-            $how_sort = "s.name";
+            $how_sort = "studios.name";
             break;
         case "country":
             //   echo"prod";
-            $how_sort = "cou.country";
+            $how_sort = "countries.country";
             break;
         case "city":
             //   echo"last name";
-            $how_sort = "s.city";
+            $how_sort = "studios.city";
             break;
         case "address":
             //    echo"duration";
-            $how_sort = " s.address";
+            $how_sort = " studios.address";
             break;
         case "postcode":
             //   echo"year_of_publication";
-            $how_sort = "s.postcode";
+            $how_sort = "studios.postcode";
             break;
         case "contact_person":
             //   echo"year_of_publication";
-            $how_sort = "s.contact_person";
+            $how_sort = "studios.contact_person";
             break;
 
     }
@@ -80,7 +80,7 @@ function MySqlQuery($flag){
                                  ORDER BY $flag;");
     return $result;
 }
-
+$studio = new Studios();
 
 
 ///echo("alcatraz:".$_POST['sort_id']."aaa");
@@ -88,7 +88,7 @@ function MySqlQuery($flag){
   if($_POST['sort_id'] !== NULL){
     $sort_id = $_POST['sort_id'];
     $how_sort = myControlSort($sort_id);
-    $result = MySqlQuery("$how_sort");
+    $result = $studio->getStudio($how_sort);
     $row = mysql_fetch_array($result);
 
     echo'<table border="1">

@@ -8,6 +8,7 @@
 
 //namespace page\printFilms;
 //use repository\FilmsRepository as film;
+require "../models/Films.php";
 ?>
 
 
@@ -43,76 +44,52 @@ function myControlSort($id){
     switch ($id) {
         case "name":
          //   echo"name";
-            $how_sort = "f.name";
+            $how_sort = "films.name";
             break;
         case "name_producer":
          //   echo"prod";
-            $how_sort = "p.name";
+            $how_sort = "producers.name";
             break;
         case "last_name":
          //   echo"last name";
-            $how_sort = "p.last_name";
+            $how_sort = "producers.last_name";
             break;
         case "duration":
         //    echo"duration";
-            $how_sort = " f.duration";
+            $how_sort = " films.duration";
             break;
         case "year_of_publication":
          //   echo"year_of_publication";
-            $how_sort = "f.year_of_publication";
+            $how_sort = "films.year_of_publication";
             break;
         case "budget":
          ///   echo"budget";
-            $how_sort = "f.budget";
+            $how_sort = "films.budget";
             break;
         case "ganre":
          //   echo"ganre";
-            $how_sort = " g.ganre";
+            $how_sort = " ganres.ganre";
             break;
         case "studio":
          //   echo"studio";
-            $how_sort = "s.name";
+            $how_sort = "studios.name";
             break;
         case "delivery_date":
           //  echo"delivery_date";
-            $how_sort = "f.delivery_date";
+            $how_sort = "films.delivery_date";
             break;
 
     }
     return $how_sort;
-
-}
-function MySqlQuery($flag){
-            $result = mysql_query(" SELECT
-                              f.name,
-                              p.name AS name_producer,
-                              p.last_name,
-                              f.duration,
-                              f.year_of_publication,
-                              f.budget,
-                              g.ganre,
-                              s.name AS studio,
-                              f.delivery_date
-                            FROM films AS f
-                                 INNER JOIN ganres_films AS gf ON f.id = gf.film_id
-                                 INNER JOIN ganres AS g ON g.id = gf.ganre_id
-
-                                 INNER JOIN producers_films AS pf ON f.id = pf.film_id
-                                 INNER JOIN producers AS p ON p.id = pf.producer_id
-
-                                 INNER JOIN studios_films AS sf ON f.id = sf.film_id
-                                 INNER JOIN studios AS s ON s.id = sf.studio_id
-                                 ORDER BY $flag;");
- return $result;
 }
 
-
-
+$film = new Films();
 
 if($_POST['sort_id'] !== NULL){
     $sort_id = $_POST['sort_id'];
     $how_sort = myControlSort($sort_id);
-    $result = MySqlQuery("$how_sort");
+    $result = $film->getFilms($how_sort);
+
     $row = mysql_fetch_array($result);
 
     echo'<table border="1">
@@ -128,10 +105,9 @@ if($_POST['sort_id'] !== NULL){
             <th>Delivery date</th>
         </tr>';
 
-
     do{
-        echo "<tr>";
-        echo "<td>".$row['last_name']."</td>";
+
+       echo "<td>".$row['last_name']."</td>";
         echo "<td>".$row['name_producer']."</td>";
         echo "<td>".$row['name']."</td>";
         echo "<td>".$row['ganre']."</td>";
@@ -141,7 +117,10 @@ if($_POST['sort_id'] !== NULL){
         echo "<td>".$row['studio']."</td>";
         echo "<td>".$row['delivery_date']."</td>";
         echo "</tr>";
+       // echo($row['id']." ");
+
     }while($row = mysql_fetch_array($result));
     echo "</table>";
 }
+
 ?>

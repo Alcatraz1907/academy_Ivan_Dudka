@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Іван
- * Date: 29.10.14
- * Time: 16:36
- */
-?>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -15,7 +8,8 @@
  */
 ?>
 <?php
-require "../conf/conf.php";
+require "../models/Studios.php";
+$studio = new Studios();
 ?>
     <form action="" method="post" name="form1" >
         <table border="2">
@@ -23,7 +17,7 @@ require "../conf/conf.php";
                 <td>
                     <select name="studio_id">
                         <?php
-                        $result = mysql_query("SELECT id,name FROM studios");
+                        $result = $studio->getStudiosTable();
                         while($myrow = mysql_fetch_array($result)){
                             echo '<option value="'.$myrow["id"].'">'.$myrow["name"].'</option>';
                         }
@@ -35,23 +29,10 @@ require "../conf/conf.php";
 
         </table>
     </form>
-
-
-
-
 <?php
 
 if ($_POST['studio_id']!=NULL)
 {
-
-    $id = $_POST['studio_id'];
-
-    $result = mysql_query("DELETE FROM `studios` WHERE id = '$id';")or die(mysql_error());
-
-
-    if ($result == 'true')
-    {echo "delete";}
-    else{echo "not delete";}
-
+    $studio->deLete($_POST['studio_id']);
 }
 ?>

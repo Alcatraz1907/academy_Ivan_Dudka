@@ -7,7 +7,8 @@
  */
 ?>
 <?php
-require "../conf/conf.php";
+require "../models/Producers.php";
+$producer = new Producers();
 ?>
     <form action="" method="post" name="form1" >
         <table border="2">
@@ -15,7 +16,7 @@ require "../conf/conf.php";
                 <td>
                     <select name="producer_id">
                         <?php
-                        $result = mysql_query("SELECT id,last_name,name FROM producers");
+                        $result = $producer->getProducersTable();
                         while($myrow = mysql_fetch_array($result)){
                             echo '<option value="'.$myrow["id"].'">'.$myrow["name"]." ".$myrow['last_name'].'</option>';
                         }
@@ -35,16 +36,6 @@ require "../conf/conf.php";
 
 if ($_POST['producer_id']!=NULL)
 {
-
-    $id = $_POST['producer_id'];
-
-    $result = mysql_query("DELETE FROM `producers` WHERE id = '$id';")or die(mysql_error());
-
-
-    if ($result == 'true')
-    {echo "delete";}
-    else{echo "not delete";}
-
-
+    $producer->deLete($_POST['producer_id']);
 }
 ?>

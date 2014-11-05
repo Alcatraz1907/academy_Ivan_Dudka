@@ -30,58 +30,44 @@
     </form>
 
 <?php
-require "../conf/conf.php";
+require "../models/Producers.php";
 
 function myControlSort($id){
     $how_sort = 0;
     switch ($id) {
         case "name":
             //   echo"name";
-            $how_sort = "p.name";
+            $how_sort = "producers.name";
             break;
         case "last_name":
             //   echo"prod";
-            $how_sort = "p.last_name";
+            $how_sort = "producers.last_name";
             break;
         case "year_of_birth":
             //   echo"last name";
-            $how_sort = "p.year_of_birth";
+            $how_sort = "producers.year_of_birth";
             break;
         case "year_of_death":
             //    echo"duration";
-            $how_sort = " p.year_of_death";
+            $how_sort = " producers.year_of_death";
             break;
         case "nationality":
             //   echo"year_of_publication";
-            $how_sort = "n.nationality";
+            $how_sort = "nationalities.nationality";
             break;
 
     }
     return $how_sort;
 
 }
-function MySqlQuery($flag){
-    $result = mysql_query(" SELECT
-                                      p.id,
-                                      p.last_name,
-                                      p.name,
-                                      p.year_of_birth,
-                                      p.year_of_death,
-                                      n.nationality
-                                  FROM producers AS p
-                                  INNER JOIN nationalities AS n ON
-                                  p.nationality_id = n.id
-                                 ORDER BY $flag;");
-    return $result;
-}
 
-
+$produser = new Producers();
 
 
 if($_POST['sort_id'] !== NULL){
     $sort_id = $_POST['sort_id'];
     $how_sort = myControlSort($sort_id);
-    $result = MySqlQuery("$how_sort");
+    $result = $produser->getProducer($how_sort);
     $row = mysql_fetch_array($result);
 
     echo'<table border="1">

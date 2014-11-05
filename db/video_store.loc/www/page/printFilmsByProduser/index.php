@@ -5,7 +5,7 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Producers.php";
 ?>
 
 <form action="" method="post" name="form1" >
@@ -32,21 +32,8 @@ if ($_POST['producer_id']!=NULL)
 {
     $id = $_POST['producer_id'];
 
-    $result =  mysql_query("	     SELECT
-                                      p.id,
-                                      p.last_name,
-                                      p.name,
-                                      f.name as film_name,
-                                      p.year_of_birth,
-                                      p.year_of_death,
-                                      n.nationality
-                                  FROM producers AS p
-                                  INNER JOIN nationalities AS n ON
-                                  p.nationality_id = n.id
-
-                                 INNER JOIN producers_films AS pf ON p.id = pf.producer_id
-                                 INNER JOIN films AS f ON f.id = pf.film_id
-                                WHERE p.id = $id")or die(mysql_error());
+$producer = new Producers();
+    $result = $producer->getFilmsByProducer($id);
 
     $row = mysql_fetch_array($result);
     if ($result == 'true')

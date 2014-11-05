@@ -1,21 +1,23 @@
 <?php
-require "../conf/conf.php";
+require "../models/Studios.php";
+require "../models/Nationalities.php";
 ?>
  <form action="" method="post" name="form1" >
         <table border="2">
         <tr><td>Last name</td>
-        <td><input type="text" name="last_name" ></td></tr>
+        <td><input type="text" ID="lastName" name="last_name" ></td></tr>
          <tr><td>Name </td>
-        <td><input type="text" name="name" ></td></tr>
+        <td><input type="text" id="name" name="name" ></td></tr>
          <tr><td>Year of birth</td>
-        <td><input type="text" name="year_of_birth" ></td></tr>
+        <td><input type="text" id="YearOfBirth" name="year_of_birth" ></td></tr>
          <tr><td>Yeat of death</td>
-        <td><input type="text" name="year_of_death" ></td></tr>
+        <td><input type="text" id="YearOfFDeath" name="year_of_death" ></td></tr>
         <tr><td>Національність</td>
         <td>
             <select name="nationality_id">
                 <?php
-                $result = mysql_query("SELECT * FROM nationalities");
+                $nationalities = new Nationalities();
+                $result = $nationalities->outputNationalities();
                 while($myrow = mysql_fetch_array($result)){
                     echo '<option value="'.$myrow["id"].'">'.$myrow["nationality"].'</option>';
                 }
@@ -28,33 +30,37 @@ require "../conf/conf.php";
         </table>
 </form>
 
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#lastName").mask("aaaaaaaaaaaaaaaaaaaa");
+            $("#name").mask("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            $("#YearOfBirth").mask("9999");
+            $("#YearOfFDeath").mask("9999");
+        });
+    </script>
 
 <?php
 
 if (($_POST['last_name']!=NULL)&&($_POST['name']!=NULL)&&($_POST['year_of_birth']!=NULL)&&($_POST['year_of_death']!=NULL || $_POST['year_of_death']==NULL )
     &&($_POST['nationality_id']!=NULL))
 {
-    $last_name = $_POST['last_name'];
+
     $year_of_birth = $_POST['year_of_birth'];
+
     if($_POST['year_of_death'] =="")
     {
         $year_of_death = NULL;
     }else{
     $year_of_death = $_POST['year_of_death'];
 }
-    $nationality = $_POST['nationality_id'];
-    $name = $_POST['name'];
+    $array_studio = array('id'=>NULL
+                        ,'last_name'=>$_POST['last_name']
+                        ,'name'=>$_POST['name']
+                        ,'year_of_birth'=>$_POST['year_of_birth']
+                        ,'year_of_death'=>$year_of_death
+                        ,'nationality_id'=>$_POST['nationality_id']);
 
-
-
-    $result = mysql_query("INSERT INTO `producers`(`id`, `last_name`, `name`, `year_of_birth`, `year_of_death`, `nationality_id`)
-                          VALUES ('NULL','$last_name','  $name','$year_of_birth',
-                          '$year_of_death','$nationality')");
-    if ($result == 'true')
-    {echo "Add ";}
-    else{echo "not add";}
-
-
+    $studio = new Studios();
+    $studio->addStudios($array_studio);
 }
 ?>

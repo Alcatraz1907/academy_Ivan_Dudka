@@ -5,7 +5,7 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Films.php";
 ?>
 
 <form action="" method="post" name="form1" >
@@ -23,27 +23,8 @@ require "../conf/conf.php";
  {
      $name = $_POST['name'];
 
-     $result =  mysql_query(" SELECT
-                              f.name,
-                              p.name AS name_producer,
-                              p.last_name,
-                              f.duration,
-                              f.year_of_publication,
-                              f.budget,
-                              g.ganre,
-                              s.name AS studio,
-                              f.delivery_date
-                            FROM films AS f
-                                 INNER JOIN ganres_films AS gf ON f.id = gf.film_id
-                                 INNER JOIN ganres AS g ON g.id = gf.ganre_id
-
-                                 INNER JOIN producers_films AS pf ON f.id = pf.film_id
-                                 INNER JOIN producers AS p ON p.id = pf.producer_id
-
-                                 INNER JOIN studios_films AS sf ON f.id = sf.film_id
-                                 INNER JOIN studios AS s ON s.id = sf.studio_id
-                                WHERE f.name LIKE '%$name%';")or die(mysql_error());
-
+$film = new Films();
+     $result =  $film->searchFilms($name);
      $row = mysql_fetch_array($result);
      if ($result == 'true')
      {

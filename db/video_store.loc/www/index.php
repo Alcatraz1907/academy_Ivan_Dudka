@@ -3,9 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Video store</title>
-<link rel="shortcut icon" href="picture/����� ������� 2.svg"
-	type="image/png">
-
+    <script src="js/jqueryCode.js" type="text/javascript"></script>
+    <script src="js/jquery.maskedinput.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <script src="js/js.js"></script>
 
@@ -18,7 +17,9 @@
 		<?php include 'units/header.php';?>
 	</div>
 	<div class="content shadow">
-		<?php include 'units/content.php';?>
+		<?php require "../conf/conf.php";
+        require "../models/Base.php";
+        include 'units/content.php';?>
 	</div>
 	<div class="footer shadow">
 		<?php include 'units/footer.php';?>
