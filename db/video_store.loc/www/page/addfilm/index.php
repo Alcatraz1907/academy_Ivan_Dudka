@@ -7,7 +7,6 @@ require "../models/ProdusersFilms.php";
 require "../models/Producers.php";
 require "../models/Ganres.php";
 require "../models/Studios.php";
-
 ?>
 
 <form action="" method="post" name="form1" >
@@ -17,9 +16,10 @@ require "../models/Studios.php";
                     <select name="producer_id[]"  size="5" multiple="multiple">
                         <?php
                         $producer = new Producers();
-                        $result = $producer->outputProducers();
-                        while($myrow = mysql_fetch_array($result)){
-                            echo '<option value="'.$myrow["id"].'">'.$myrow["name"]." ".$myrow['last_name'].'</option>';
+                        $result = $producer->getProducersTable();
+
+                        for($i = 0;$i<count($result);$i++){
+                            echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName()." ".$result[$i]->getLastName().'</option>';
                         }
                         ?>
                     </select>
@@ -32,8 +32,9 @@ require "../models/Studios.php";
                         <?php
                         $ganre = new Ganres();
                         $result = $ganre->outputGanres();
-                        while($myrow = mysql_fetch_array($result)){
-                            echo '<option value="'.$myrow["id"].'">'.$myrow["ganre"].'</option>';
+
+                        for($i = 0;$i<count($result);$i++){
+                            echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getGanre().'</option>';
                         }
                         ?>
                     </select>
@@ -49,9 +50,9 @@ require "../models/Studios.php";
                     <select name="stidios_id[]"  size="5" multiple="multiple">
                             <?php
                             $studio = new Studios();
-                            $result = $studio->outputStudios();
-                            while($myrow = mysql_fetch_array($result)){
-                                echo '<option value="'.$myrow["id"].'">'.$myrow["name"].'</option>';
+                            $result = $studio->getStudiosTable();
+                            for($i = 0;$i<count($result);$i++){
+                                echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName().'</option>';
                             }
                             ?>
                     </select>

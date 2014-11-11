@@ -22,3 +22,4 @@ for($i = 2; $i < $number_of_directs; $i ++) {
 <?php
 }
 ?>
+<!--<a href="../page/addcountry/index.php" >addcountry </a>--!>

@@ -14,9 +14,11 @@ require "../models/Producers.php";
             <td>
                 <select name="producer_id">
                     <?php
-                    $result = mysql_query("SELECT id,last_name,name FROM producers");
-                    while($myrow = mysql_fetch_array($result)){
-                        echo '<option value="'.$myrow["id"].'">'.$myrow["name"]." ".$myrow['last_name'].'</option>';
+                    $producer = new Producers();
+                    $result = $producer->getProducersTable();
+
+                    for($i = 0;$i<count($result);$i++){
+                        echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName()." ".$result[$i]->getLastName().'</option>';
                     }
                     ?>
                 </select>
@@ -35,7 +37,6 @@ if ($_POST['producer_id']!=NULL)
 $producer = new Producers();
     $result = $producer->getFilmsByProducer($id);
 
-    $row = mysql_fetch_array($result);
     if ($result == 'true')
     {
         echo "Ваши данные не добавлены";
@@ -52,16 +53,16 @@ $producer = new Producers();
             <th>Nationality</th>
         </tr>';
 
-        do{
+        for($i = 0;$i < count($result);$i++){
             echo "<tr>";
-            echo "<td>".$row['last_name']."</td>";
-            echo "<td>".$row['name']."</td>";
-            echo "<td>".$row['film_name']."</td>";
-            echo "<td>".$row['year_of_birth']."</td>";
-            echo "<td>".$row['year_of_death']."</td>";
-            echo "<td>".$row['nationality']."</td>";
+            echo "<td>".$result[$i]['last_name']."</td>";
+            echo "<td>".$result[$i]['name']."</td>";
+            echo "<td>".$result[$i]['film_name']."</td>";
+            echo "<td>".$result[$i]['year_of_birth']."</td>";
+            echo "<td>".$result[$i]['year_of_death']."</td>";
+            echo "<td>".$result[$i]['nationality']."</td>";
             echo "</tr>";
-        }while($row = mysql_fetch_array($result));
+        }
         echo "</table>";
     }
 

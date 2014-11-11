@@ -17,9 +17,10 @@ $studio = new Studios();
                 <td>
                     <select name="studio_id">
                         <?php
+                        $studio = new Studios();
                         $result = $studio->getStudiosTable();
-                        while($myrow = mysql_fetch_array($result)){
-                            echo '<option value="'.$myrow["id"].'">'.$myrow["name"].'</option>';
+                        for($i = 0;$i<count($result);$i++){
+                            echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName().'</option>';
                         }
                         ?>
                     </select>

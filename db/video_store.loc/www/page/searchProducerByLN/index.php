@@ -26,13 +26,6 @@ if ($_POST['name']!=NULL)
     $produser = new Producers();
     $result = $produser->searchProducer($name);
 
-    $row = mysql_fetch_array($result);
-    if ($result == 'true')
-    {
-        echo "Ваши данные не добавлены";
-    }
-    else{
-
         echo'<table border="1">
         <tr>
             <th>Last name </th>
@@ -42,18 +35,17 @@ if ($_POST['name']!=NULL)
             <th>Nationality</th>
         </tr>';
 
-        do{
-            echo "<tr>";
-            echo "<td>".$row['last_name']."</td>";
-            echo "<td>".$row['name']."</td>";
-            echo "<td>".$row['year_of_birth']."</td>";
-            echo "<td>".$row['year_of_death']."</td>";
-            echo "<td>".$row['nationality']."</td>";
-            echo "</tr>";
-        }while($row = mysql_fetch_array($result));
-        echo "</table>";
-    }
+    for($i = 0;$i < count($result);$i++){
 
+        echo "<tr>";
+        echo "<td>".$result[$i]->getLastName()."</td>";
+        echo "<td>".$result[$i]->getName()."</td>";
+        echo "<td>".$result[$i]->getYearOfBirth()."</td>";
+        echo "<td>".$result[$i]->getYearOfDeath()."</td>";
+        echo "<td>".$result[$i]->getNationality()."</td>";
+        echo "</tr>";
+    }
+        echo "</table>";
 }
 
 ?>

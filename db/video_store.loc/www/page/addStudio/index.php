@@ -13,8 +13,8 @@ require "../models/Countries.php";
                 <?php
                     $countries = new Countries();
                     $result = $countries->outputCountry();
-                    while($myrow = mysql_fetch_array($result)){
-                        echo '<option value="'.$myrow["id"].'">'.$myrow["country"].'</option>';
+                    for($i = 0;$i < count($result);$i++){
+                        echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getCountry().'</option>';
                     }
                 ?>
             </select>

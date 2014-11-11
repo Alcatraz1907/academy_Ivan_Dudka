@@ -68,7 +68,6 @@ if($_POST['sort_id'] !== NULL){
     $sort_id = $_POST['sort_id'];
     $how_sort = myControlSort($sort_id);
     $result = $produser->getProducer($how_sort);
-    $row = mysql_fetch_array($result);
 
     echo'<table border="1">
         <tr>
@@ -79,15 +78,17 @@ if($_POST['sort_id'] !== NULL){
             <th>Nationality</th>
         </tr>';
 
-    do{
+    for($i = 0;$i < count($result);$i++){
+
         echo "<tr>";
-        echo "<td>".$row['last_name']."</td>";
-        echo "<td>".$row['name']."</td>";
-        echo "<td>".$row['year_of_birth']."</td>";
-        echo "<td>".$row['year_of_death']."</td>";
-        echo "<td>".$row['nationality']."</td>";
+        echo "<td>".$result[$i]->getLastName()."</td>";
+        echo "<td>".$result[$i]->getName()."</td>";
+        echo "<td>".$result[$i]->getYearOfBirth()."</td>";
+        echo "<td>".$result[$i]->getYearOfDeath()."</td>";
+        echo "<td>".$result[$i]->getNationality()."</td>";
         echo "</tr>";
-    }while($row = mysql_fetch_array($result));
+
+    }
     echo "</table>";
 }
 ?>

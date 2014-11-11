@@ -25,12 +25,9 @@ require "../models/Films.php";
 
 $film = new Films();
      $result =  $film->searchFilms($name);
-     $row = mysql_fetch_array($result);
-     if ($result == 'true')
-     {
-         echo "not add";
-     }
-     else{$row = mysql_fetch_array($result);
+
+
+
 
          echo'<table border="1">
         <tr>
@@ -46,22 +43,22 @@ $film = new Films();
         </tr>';
 
 
-         do{
-
-             echo "<tr>";
-             echo "<td>".$row['last_name']."</td>";
-             echo "<td>".$row['name_producer']."</td>";
-             echo "<td>".$row['name']."</td>";
-             echo "<td>".$row['ganre']."</td>";
-             echo "<td>".$row['duration']."</td>";
-             echo "<td>".$row['year_of_publication']."</td>";
-             echo "<td>".$row['budget']."</td>";
-             echo "<td>".$row['studio']."</td>";
-             echo "<td>".$row['delivery_date']."</td>";
+         for($i = 0;$i<count($result);$i++)
+         {
+             echo "<td>".$result[$i]->getLastName()."</td>";
+             echo "<td>".$result[$i]->getProducerName()."</td>";
+             echo "<td>".$result[$i]->getName()."</td>";
+             echo "<td>".$result[$i]->getNameStudio()."</td>";
+             echo "<td>".$result[$i]->getDuration()."</td>";
+             echo "<td>".$result[$i]->getGanre()."</td>";
+             echo "<td>".$result[$i]->getBudget()."</td>";
+             echo "<td>".$result[$i]->getNameStudio()."</td>";
+             echo "<td>".$result[$i]->getDeliveryDate()."</td>";
              echo "</tr>";
-         }while($row = mysql_fetch_array($result));
-         echo "</table>";
+             // echo($row['id']." ");
          }
+         echo "</table>";
+
 
  }
 

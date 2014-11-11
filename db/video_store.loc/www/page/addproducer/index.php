@@ -18,8 +18,8 @@ require "../models/Nationalities.php";
                 <?php
                 $nationalities = new Nationalities();
                 $result = $nationalities->outputNationalities();
-                while($myrow = mysql_fetch_array($result)){
-                    echo '<option value="'.$myrow["id"].'">'.$myrow["nationality"].'</option>';
+                for($i = 0;$i < count($result);$i++){
+                    echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getNationality().'</option>';
                 }
                 ?>
             </select>

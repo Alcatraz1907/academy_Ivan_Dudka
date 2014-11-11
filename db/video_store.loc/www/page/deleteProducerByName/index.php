@@ -16,9 +16,11 @@ $producer = new Producers();
                 <td>
                     <select name="producer_id">
                         <?php
+                        $producer = new Producers();
                         $result = $producer->getProducersTable();
-                        while($myrow = mysql_fetch_array($result)){
-                            echo '<option value="'.$myrow["id"].'">'.$myrow["name"]." ".$myrow['last_name'].'</option>';
+
+                        for($i = 0;$i<count($result);$i++){
+                            echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName()." ".$result[$i]->getLastName().'</option>';
                         }
                         ?>
                     </select>

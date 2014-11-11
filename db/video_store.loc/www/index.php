@@ -19,6 +19,7 @@
 	<div class="content shadow">
 		<?php require "../conf/conf.php";
         require "../models/Base.php";
+
         include 'units/content.php';?>
 	</div>
 	<div class="footer shadow">

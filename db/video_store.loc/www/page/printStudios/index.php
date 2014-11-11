@@ -64,22 +64,7 @@ function myControlSort($id){
     return $how_sort;
 
 }
-function MySqlQuery($flag){
-    $result = mysql_query(" SELECT
-                                      s.id,
-                                      s.name,
-                                      cou.country,
-                                      s.city,
-                                      s.address,
-                                      s.postcode,
-                                      s.contact_person
 
-                                  FROM studios AS s
-                                  INNER JOIN countries AS cou ON
-                                  s.country_id = cou.id
-                                 ORDER BY $flag;");
-    return $result;
-}
 $studio = new Studios();
 
 
@@ -89,7 +74,6 @@ $studio = new Studios();
     $sort_id = $_POST['sort_id'];
     $how_sort = myControlSort($sort_id);
     $result = $studio->getStudio($how_sort);
-    $row = mysql_fetch_array($result);
 
     echo'<table border="1">
         <tr>
@@ -101,16 +85,16 @@ $studio = new Studios();
             <th>Контактна особа</th>
         </tr>';
 
-    do{
+    for($i = 0;$i < count($result);$i++){
         echo "<tr>";
-        echo "<td>".$row['name']."</td>";
-        echo "<td>".$row['country']."</td>";
-        echo "<td>".$row['city']."</td>";
-        echo "<td>".$row['address']."</td>";
-        echo "<td>".$row['postcode']."</td>";
-        echo "<td>".$row['contact_person']."</td>";
+        echo "<td>".$result[$i]['name']."</td>";
+        echo "<td>".$result[$i]['country']."</td>";
+        echo "<td>".$result[$i]['city']."</td>";
+        echo "<td>".$result[$i]['address']."</td>";
+        echo "<td>".$result[$i]['postcode']."</td>";
+        echo "<td>".$result[$i]['contact_person']."</td>";
         echo "</tr>";
-    }while($row = mysql_fetch_array($result));
+    }
     echo "</table>";
 }
 ?>
