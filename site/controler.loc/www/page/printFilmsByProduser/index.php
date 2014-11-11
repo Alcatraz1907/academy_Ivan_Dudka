@@ -5,18 +5,20 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Producers.php";
 ?>
 
 <form action="" method="post" name="form1" >
     <table border="2">
-        <tr><td>Виберіть продюсера для  видалення</td>
+        <tr><td>Select produser</td>
             <td>
                 <select name="producer_id">
                     <?php
-                    $result = mysql_query("SELECT id,last_name,name FROM producers");
-                    while($myrow = mysql_fetch_array($result)){
-                        echo '<option value="'.$myrow["id"].'">'.$myrow["name"]." ".$myrow['last_name'].'</option>';
+                    $producer = new Producers();
+                    $result = $producer->getProducersTable();
+
+                    for($i = 0;$i<count($result);$i++){
+                        echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName()." ".$result[$i]->getLastName().'</option>';
                     }
                     ?>
                 </select>
@@ -32,23 +34,9 @@ if ($_POST['producer_id']!=NULL)
 {
     $id = $_POST['producer_id'];
 
-    $result =  mysql_query("	     SELECT
-                                      p.id,
-                                      p.last_name,
-                                      p.name,
-                                      f.name as film_name,
-                                      p.year_of_birth,
-                                      p.year_of_death,
-                                      n.nationality
-                                  FROM producers AS p
-                                  INNER JOIN nationalities AS n ON
-                                  p.nationality_id = n.id
+$producer = new Producers();
+    $result = $producer->getFilmsByProducer($id);
 
-                                 INNER JOIN producers_films AS pf ON p.id = pf.producer_id
-                                 INNER JOIN films AS f ON f.id = pf.film_id
-                                WHERE p.id = $id")or die(mysql_error());
-
-    $row = mysql_fetch_array($result);
     if ($result == 'true')
     {
         echo "Ваши данные не добавлены";
@@ -57,24 +45,24 @@ if ($_POST['producer_id']!=NULL)
 
         echo'<table border="1">
         <tr>
-            <th>Прізвище </th>
-            <th>Імя продюсера</th>
-            <th>Назва фільму</th>
-            <th>Рік народження</th>
-            <th>Рік смерті</th>
-            <th>національність</th>
+            <th>Last name </th>
+            <th>Name </th>
+            <th>Name film</th>
+            <th>Year of birth</th>
+            <th>Year of death</th>
+            <th>Nationality</th>
         </tr>';
 
-        do{
+        for($i = 0;$i < count($result);$i++){
             echo "<tr>";
-            echo "<td>".$row['last_name']."</td>";
-            echo "<td>".$row['name']."</td>";
-            echo "<td>".$row['film_name']."</td>";
-            echo "<td>".$row['year_of_birth']."</td>";
-            echo "<td>".$row['year_of_death']."</td>";
-            echo "<td>".$row['nationality']."</td>";
+            echo "<td>".$result[$i]['last_name']."</td>";
+            echo "<td>".$result[$i]['name']."</td>";
+            echo "<td>".$result[$i]['film_name']."</td>";
+            echo "<td>".$result[$i]['year_of_birth']."</td>";
+            echo "<td>".$result[$i]['year_of_death']."</td>";
+            echo "<td>".$result[$i]['nationality']."</td>";
             echo "</tr>";
-        }while($row = mysql_fetch_array($result));
+        }
         echo "</table>";
     }
 

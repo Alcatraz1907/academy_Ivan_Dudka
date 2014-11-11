@@ -1,11 +1,4 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Іван
- * Date: 29.10.14
- * Time: 16:36
- */
-?>
+
 <?php
 /**
  * Created by PhpStorm.
@@ -15,17 +8,19 @@
  */
 ?>
 <?php
-require "../conf/conf.php";
+require "../models/Studios.php";
+$studio = new Studios();
 ?>
     <form action="" method="post" name="form1" >
         <table border="2">
-            <tr><td>Виберіть студію для видалення</td>
+            <tr><td>Select studios for delete</td>
                 <td>
                     <select name="studio_id">
                         <?php
-                        $result = mysql_query("SELECT id,name FROM studios");
-                        while($myrow = mysql_fetch_array($result)){
-                            echo '<option value="'.$myrow["id"].'">'.$myrow["name"].'</option>';
+                        $studio = new Studios();
+                        $result = $studio->getStudiosTable();
+                        for($i = 0;$i<count($result);$i++){
+                            echo '<option value="'.$result[$i]->getId().'">'.$result[$i]->getName().'</option>';
                         }
                         ?>
                     </select>
@@ -35,22 +30,10 @@ require "../conf/conf.php";
 
         </table>
     </form>
-
-
-
-
 <?php
 
 if ($_POST['studio_id']!=NULL)
 {
-
-    $id = $_POST['studio_id'];
-
-    $result = mysql_query("DELETE FROM `studios` WHERE id = '$id';")or die(mysql_error());
-
-    if ($result == 'true')
-    {echo "Ваши данные успешно видалені";}
-    else{echo "Ваши данные не видалені";}
-
+    $studio->deLete($_POST['studio_id']);
 }
 ?>

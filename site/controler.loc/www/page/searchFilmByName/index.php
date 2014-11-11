@@ -5,12 +5,12 @@
  * Date: 29.10.14
  * Time: 17:27
  */
-require "../conf/conf.php";
+require "../models/Films.php";
 ?>
 
 <form action="" method="post" name="form1" >
         <table border="2">
-        <tr><td>Пошук фільму(ведіть назву)</td>
+        <tr><td>Search film(enter name)</td>
         <td><input type="text" name="name" ></td></tr>
 
             <tr><td colspan="2" align="center"><input name="add" type="submit" value="Search" class="buttom">
@@ -23,64 +23,42 @@ require "../conf/conf.php";
  {
      $name = $_POST['name'];
 
-     $result =  mysql_query(" SELECT
-                              f.name,
-                              p.name AS name_producer,
-                              p.last_name,
-                              f.duration,
-                              f.year_of_publication,
-                              f.budget,
-                              g.ganre,
-                              s.name AS studio,
-                              f.delivery_date
-                            FROM films AS f
-                                 INNER JOIN ganres_films AS gf ON f.id = gf.film_id
-                                 INNER JOIN ganres AS g ON g.id = gf.ganre_id
+$film = new Films();
+     $result =  $film->searchFilms($name);
 
-                                 INNER JOIN producers_films AS pf ON f.id = pf.film_id
-                                 INNER JOIN producers AS p ON p.id = pf.producer_id
 
-                                 INNER JOIN studios_films AS sf ON f.id = sf.film_id
-                                 INNER JOIN studios AS s ON s.id = sf.studio_id
-                                WHERE f.name LIKE '%$name%';")or die(mysql_error());
 
-     $row = mysql_fetch_array($result);
-     if ($result == 'true')
-     {
-         echo "Ваши данные не добавлены";
-     }
-     else{$row = mysql_fetch_array($result);
 
          echo'<table border="1">
         <tr>
-            <th>Прізвище </th>
-            <th>Імя продюсера</th>
-            <th>назва фільму</th>
-            <th>жанр</th>
-            <th>Тивалість</th>
-            <th>Дата виходу</th>
-            <th>бюджет</th>
-            <th>студія</th>
-            <th>дата поступлення на склад</th>
+            <th>Last name </th>
+            <th>Name producer</th>
+            <th>Name films</th>
+            <th>Ganre</th>
+            <th>Duration</th>
+            <th>Year of publication</th>
+            <th>Budget</th>
+            <th>Studio</th>
+            <th>Delivery date</th>
         </tr>';
 
 
-         do{
-
-             echo "<tr>";
-             echo "<td>".$row['last_name']."</td>";
-             echo "<td>".$row['name_producer']."</td>";
-             echo "<td>".$row['name']."</td>";
-             echo "<td>".$row['ganre']."</td>";
-             echo "<td>".$row['duration']."</td>";
-             echo "<td>".$row['year_of_publication']."</td>";
-             echo "<td>".$row['budget']."</td>";
-             echo "<td>".$row['studio']."</td>";
-             echo "<td>".$row['delivery_date']."</td>";
+         for($i = 0;$i<count($result);$i++)
+         {
+             echo "<td>".$result[$i]->getLastName()."</td>";
+             echo "<td>".$result[$i]->getProducerName()."</td>";
+             echo "<td>".$result[$i]->getName()."</td>";
+             echo "<td>".$result[$i]->getNameStudio()."</td>";
+             echo "<td>".$result[$i]->getDuration()."</td>";
+             echo "<td>".$result[$i]->getGanre()."</td>";
+             echo "<td>".$result[$i]->getBudget()."</td>";
+             echo "<td>".$result[$i]->getNameStudio()."</td>";
+             echo "<td>".$result[$i]->getDeliveryDate()."</td>";
              echo "</tr>";
-         }while($row = mysql_fetch_array($result));
-         echo "</table>";
+             // echo($row['id']." ");
          }
+         echo "</table>";
+
 
  }
 

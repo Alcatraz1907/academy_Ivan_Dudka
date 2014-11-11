@@ -1,2 +1,2 @@
 
-<h1 class="cltitle">Відеотека</h1>
+<h1 class="cltitle">Video store</h1>
