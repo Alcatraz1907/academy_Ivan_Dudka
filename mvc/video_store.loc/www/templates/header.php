@@ -33,61 +33,55 @@
 
 
             <div id="mainmenu">
-                <ul>
+                     <ul>
                     <!-- Пункт меню 1 -->
                     <li><a  href="?">Home</a>
                         <ul>
                     </li>
                 </ul>
 
-                    <!-- Пункт меню 2 -->
-                    <li><a  href="?controler=films">film</a>
-                        <ul>
-                            <li><a href="?controler=films&action=add">add</a></li>
-                            <li><a href="?controler=films&action=delete">delete</a></li>
-                            <li><a href="?controler=films&action=print">print</a></li>
-                            <li><a href="?controler=films&action=search">search</a></li>
-                        </ul>
-                    </li>
-                    <!-- Пункт меню 3 -->
-                    <li><a  href="?controler=studios">studio</a>
-                        <ul>
-                            <li><a  href="?controler=studios&action=add">add</a></li>
-                            <li><a  href="?controler=studios&action=delete">delete</a></li>
-                            <li><a  href="?controler=studios&action=print">print</a></li>
-                            <li><a  href="?controler=studios&action=printfilmsbystudio">print films by studio</a></li>
-                            <li><a  href="?controler=studios&action=search">search</a></li>
-                        </ul>
-                    </li>
-                    <!-- Пункт меню 4 -->
-                    <li> <a  href="?controler=producers">producer</a>
-                        <ul>
-                            <li><a  href="?controler=producers&action=add">add</a></li>
-                            <li><a  href="?controler=producers&action=delete">delete</a></li>
-                            <li><a  href="?controler=producers&action=print">print</a></li>
-                            <li><a  href="?controler=producers&action=printfilmbyproducer">print film by producer</a></li>
-                            <li><a  href="?controler=producers&action=search">search</a></li>
-                        </ul>
-                    </li>
+                <!-- Пункт меню 2 -->
+                <li><a  href="?controler=films">film</a>
+                    <ul>
+                        <li><a href="?controler=films&action=add">Add</a></li>
+                        <li><a href="?controler=films&action=delete">Delete</a></li>
+                        <li><a href="?controler=films&action=print">Print</a></li>
+                        <li><a href="?controler=films&action=search">Search</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 3 -->
+                <li><a  href="?controler=studios">studio</a>
+                    <ul>
+                        <li><a  href="?controler=studios&action=add">Add</a></li>
+                        <li><a  href="?controler=studios&action=delete">Delete</a></li>
+                        <li><a  href="?controler=studios&action=print">Print</a></li>
+                        <li><a  href="?controler=studios&action=printfilmsbystudio">Print films by studio</a></li>
+                        <li><a  href="?controler=studios&action=search">Search</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 4 -->
+                <li> <a  href="?controler=producers">producer</a>
+                    <ul>
+                        <li><a  href="?controler=producers&action=add">Add</a></li>
+                        <li><a  href="?controler=producers&action=delete">Delete</a></li>
+                        <li><a  href="?controler=producers&action=print">Print</a></li>
+                        <li><a  href="?controler=producers&action=printfilmbyproducer">Print film by producer</a></li>
+                        <li><a  href="?controler=producers&action=search">Search</a></li>
+                    </ul>
+                </li>
 
                 <!-- Пункт меню 5 -->
                 <li><a href="?controler=countries">Country</a>
                     <ul>
                         <li><a href="?controler=countries&action=add">add</a></li>
-                        <li><a href="#">подпункт 5.2</a></li>
-                        <li><a href="#">подпункт 5.3</a></li>
-                        <li><a href="#">подпункт 5.4</a></li>
-                        <li><a href="#">подпункт 5.5</a></li>
+                    
                     </ul>
                 </li>
                 <!-- Пункт меню 6 -->
-                <li><a href="?controler=nationalities">Country</a>
+                <li><a href="?controler=nationalities">Nationality</a>
                     <ul>
                         <li><a href="?controler=nationalities&action=add">add</a></li>
-                        <li><a href="#">подпункт 5.2</a></li>
-                        <li><a href="#">подпункт 5.3</a></li>
-                        <li><a href="#">подпункт 5.4</a></li>
-                        <li><a href="#">подпункт 5.5</a></li>
+
                     </ul>
                 </li>
 
