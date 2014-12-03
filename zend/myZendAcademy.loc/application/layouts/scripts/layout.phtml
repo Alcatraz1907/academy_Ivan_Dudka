@@ -1,0 +1,107 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php $this->headLink()->prependStylesheet('/css/main.css') ?>
+    <?php $this->headLink()->prependStylesheet($this->baseUrl() . '/css/bootstrap/bootstrap.css') ?>
+    <?php $this->headLink()->prependStylesheet($this->baseUrl() . '/css/bootstrap/listA.css') ?>
+    <?php $this->headLink()->prependStylesheet($this->baseUrl() . '/css/bootstrap/template.css') ?>
+    <?php echo $this->headLink() ?>
+
+    <?php $this->headScript()->appendFile('/js/bootstrap.js','text/javascript')?>
+    <?php $this->headScript()->appendFile('/js/jquery.js','text/javascript')?>
+    <?php echo $this->headScript()?>
+
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+
+
+            <div id="mainmenu">
+                <ul>
+                    <!-- Пункт меню 1 -->
+                    <li><a  href="?">Home</a>
+                        <ul>
+                    </li>
+                </ul>
+
+                <!-- Пункт меню 2 -->
+                <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'films', 'action' => 'index'), 'default'); ?>">Film</a>
+                    <ul>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'films', 'action' => 'add'), 'default'); ?>">Add</a></li>
+                        <li><a href="?controler=films&action=delete">Delete</a></li>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'films', 'action' => 'index'), 'default'); ?>">List</a></li>
+                        <li><a href="?controler=films&action=search">Search</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 3 -->
+                <li><a  href="?controler=studios">studio</a>
+                    <ul>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'studios', 'action' => 'add'), 'default'); ?>">Add</a></li>
+                        <li><a  href="?controler=studios&action=delete">Delete</a></li>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'studios', 'action' => 'index'), 'default'); ?>">List</a></li>
+                        <li><a  href="?controler=studios&action=printfilmsbystudio">Print films by studio</a></li>
+                        <li><a  href="?controler=studios&action=search">Search</a></li>
+                    </ul>
+                </li>
+                <!-- Пункт меню 4 -->
+                <li> <a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'producers', 'action' => 'index'), 'default'); ?>">Producer</a>
+                    <ul>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'producers', 'action' => 'add'), 'default'); ?>">Add</a></li>
+                        <li><a  href="?controler=producers&action=delete">Delete</a></li>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'producers', 'action' => 'index'), 'default'); ?>">List</a></li>
+                        <li><a  href="?controler=producers&action=printfilmbyproducer">Print film by producer</a></li>
+                        <li><a  href="?controler=producers&action=search">Search</a></li>
+                    </ul>
+                </li>
+
+                <!-- Пункт меню 5 -->
+                <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'countries', 'action' => 'index'), 'default'); ?>">Countries</a>
+                    <ul>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'countries', 'action' => 'add'), 'default'); ?>">Add</a></li>
+                        <li><a href="#">подпункт 5.2</a></li>
+
+                    </ul>
+                </li>
+                <!-- Пункт меню 6 -->
+                <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'nationalities', 'action' => 'index'), 'default'); ?>">Nationality</a>
+                    <ul>
+                        <li><a href="<?php echo $this->url(array('module' => 'default', 'controller' => 'nationalities', 'action' => 'add'), 'default'); ?>">Add</a></li>
+                        <li><a href="#">подпункт 5.2</a></li>
+                     </ul>
+                </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <p>text<p>
+    </div>
+</nav>
+
+
+
+<div class="container">
+    <div class="modal-content">
+
+        <h2><?php echo $this->title ?></h2>
+        <?php echo $this->layout()->content ?>
+    </div>
+
+    </div>
+
+
+    <!--<div class="glyphicon-folder-open" >
+        <p>Footer</p>
+    </div> -->
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?php if(count($this->films)): ?>
+    <table border="1">
+        <tr>
+
+            <th>Last name </th>
+            <th>Name produser</th>
+            <th>Name films</th>
+            <th>Ganre</th>
+            <th>Duration</th>
+            <th>Year of publication</th>
+            <th>Budget</th>
+            <th>Studio</th>
+            <th>Delivery date</th>
+            <th>Action</th>
+
+        </tr>
+
+        <?php /*die(print_r($this->films));*/   foreach ($this->films as $film): ?>
+            <tr>
+                <td><?php echo $film->producer_name?></td>
+                <td><?php echo $film->last_name?></td>
+                <td><?php echo $film->name?></td>
+                <td><?php echo $film->ganre?></td>
+                <td><?php echo $film->duration?></td>
+                <td><?php echo $film->year_of_publication?></td>
+                <td><?php echo $film->budget?></td>
+                <td><?php echo $film->studio_name?></td>
+                <td><?php echo $film->delivery_date?></td>
+
+                <td><a href="<?php echo $this->url(array(
+                        'controller'=>'films',
+                        'action'=> 'edit',
+                        'id'=>$film->film_id
+                    ))?>">Edit</a>
+
+                    <a href="<?php echo $this->url(array(
+                        'controller'=>'films',
+                        'action'=> 'delete',
+                        'id'=>$film->film_id
+                    ))?>">Delete</a></td>
+            </tr>
+        <?php endforeach ?>
+    </table>
+<?php else: ?>
+    <p>List films not fond</p>
+<?php endif ?>
+

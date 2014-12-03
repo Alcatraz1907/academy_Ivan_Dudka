@@ -1,0 +1,34 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Іван
+ * Date: 28.10.14
+ * Time: 22:45
+ */
+if(count($this->producers)) {
+    echo '<table border="1">
+        <tr>
+            <th>Name </th>
+            <th>Last name </th>
+            <th>Year of birth</th>
+            <th>Year of dead</th>
+            <th>Nationality</th>
+
+        </tr>';
+
+    foreach ($this->producers as $producer) {
+
+        echo "<td>" .$producer->name_producer. "</td>";
+        echo "<td>" .$producer->last_name. "</td>";
+        echo "<td>" .$producer->year_of_birth. "</td>";
+        echo "<td>" .$producer->year_of_death. "</td>";
+        echo "<td>" .$producer->nationality . "</td>";
+        echo "</tr>";
+
+    }
+    echo "</table>";
+}else{
+    echo "<p>List  films not found</p>";
+}
+
+?>

@@ -1,0 +1,29 @@
+<?php if(count($this->countries)): ?>
+   <table border="1">
+        <tr>
+
+            <th>Last name </th>
+            <th>Action</th>
+
+        </tr>
+
+ <?php   foreach ($this->countries as $countries): ?>
+        <tr>
+            <td><?php echo $countries->country?></td>
+
+            <td><a href="<?php echo $this->url(array(
+                    'controller'=>'countries',
+                    'action'=> 'edit',
+                    'id'=>$countries->id
+                ))?>">Edit</a>
+                <a href="<?php echo $this->url(array(
+                    'controller'=>'countries',
+                    'action'=> 'delete',
+                    'id'=>$countries->id
+                ))?>">delete</a></td>
+        </tr>
+  <?php endforeach ?>
+    </table>
+<?php else: ?>
+    <p>Списку користувачів не має</p>
+<?php endif ?>
